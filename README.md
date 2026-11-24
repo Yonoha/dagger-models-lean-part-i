@@ -7,17 +7,18 @@ as AI-generated. Independent human correspondence review is pending.
 
 ## Start here
 
-- **[English catalogue (PDF)](https://github.com/Yonoha/dagger-models-lean-part-i/releases/download/v0.2.0-rc1/part1-lean-formalization-companion-en.pdf)**: 40 grouped substantial results.
+- **[English catalogue (PDF)](https://github.com/Yonoha/dagger-models-lean-part-i/releases/download/catalogue-20261125/part1-lean-formalization-companion-en.pdf)**: concise revised catalogue, 40 grouped substantial results.
 - **[Fixed paper-facing release: v0.2.0-rc1](https://github.com/Yonoha/dagger-models-lean-part-i/releases/tag/v0.2.0-rc1)**.
 - [Main A/B/C/D entry points](lean/MainTheoremsABCD.lean) and [exact statements and scope](MAIN_THEOREMS.md).
-- [Catalogue source and build instructions](docs/formalization-companion/README.md).
+- [Catalogue source and build instructions](docs/formalization-companion/README.md), [declaration index](docs/formalization-companion/RESULT_INDEX.md) and [fixed PDF release](https://github.com/Yonoha/dagger-models-lean-part-i/releases/tag/catalogue-20261125).
 - [Saved local verification](LINUX_VERIFICATION.md) and [current GitHub CI explanation](CI_STATUS.md).
 - [Part II companion](https://github.com/Yonoha/dagger-models-lean-part-ii).
 
 The sources include the dagger Bergner and dagger Joyal models, their
 rigidification--nerve comparison, unitary cores, and substantial supporting
 category-theoretic and simplicial infrastructure. The catalogue maps its
-40 groups to 91 declarations in 58 source files and states their precise scope.
+40 groups, together with separately credited reused foundations, to 91 declarations
+in 58 source files. The PDF states their scope; the linked index retains full references.
 
 ## Verification
 

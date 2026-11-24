@@ -1,0 +1,40 @@
+{
+  "kind": "documentation-only catalogue revision",
+  "catalogue_tag": "catalogue-20261125",
+  "date": "2026-11-25",
+  "previous_formalization_release": "v0.2.0-rc1",
+  "proof_source_commit": "9ee62295a79ef61269259e27216afc0292458931",
+  "previous_pages": 16,
+  "pages": 11,
+  "grouped_results": 40,
+  "declarations_including_reused_foundations": 91,
+  "source_files_including_reused_foundations": 58,
+  "pdf": {
+    "path": "docs/formalization-companion/part1-lean-formalization-companion-en.pdf",
+    "sha256": "b044eb58d5029fbe5a2e529c4aeb5aeee331fefefa31541730fc9f352745c7c1"
+  },
+  "document_source_sha256": {
+    "README.md": "eab0abf1769624df6d826d2af90e21d9cea01dd40899b6070203a1cd74bc735c",
+    "RESULT_INDEX.md": "70986c728152235e26c2aaaffe6632292025a7d34b5bcd663ef371c085517a63",
+    "dagger-results.tex": "bb26d0b9be4c72c1db60d79f523641c47530de5173b0a903dbd483c18030d669",
+    "main-results.tex": "8957427dd46846cdd4b7d2f8e10d4fd8f3a29be19baf8675c8cbdc3c229f6a69",
+    "main.tex": "a43d4abf6b459430bc9e1602acebe9de6ea287514b051cc7266d3ef5ae502f0a",
+    "model-results.tex": "4b97dc8579e3ff46f69ad2767260b12a86c3f0ca882c3bd0ec1cebc9ace41c5f",
+    "overview.tex": "62cb3fe42bb89e47cc6b55136721997fc99d29e4a297cbf6905a0b79071a0405",
+    "part1-notation.tex": "69bd4753a46c45c38bf60a8af996fd94b921a3577b61422f14ef5657ec5b1596",
+    "results.json": "31bd82c5fbb45e0ca686575c54665ed4170dbee74eaa62aa1197712367c42c2d",
+    "simplicial-results.tex": "c059d34008cafcaa3d5af13600f84de4efbc50fcb1b81f6a3fba67be1a5883c9",
+    "verification.tex": "110b66ca2cdaacb8e7d1fb846a0e11c09ade74050bfa330573854a37050f106b"
+  },
+  "editorial_checks": {
+    "all_40_statement_blocks_unchanged_except_arrow_typography": true,
+    "all_91_declarations_found_in_saved_owner_audit": true,
+    "all_58_source_files_match_accepted_manifest_and_pinned_commit": true,
+    "all_40_pdf_result_links_match_index_anchors": true,
+    "rendered_pages_visually_reviewed": 11,
+    "latex_warnings_or_box_warnings": false
+  },
+  "new_lean_build_or_axiom_audit": false,
+  "new_hosted_comparator_run": false,
+  "independent_human_correspondence_review": false
+}

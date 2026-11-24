@@ -1,3 +1,9 @@
+> The current concise English PDF is the documentation-only
+> [catalogue-20261125 release](https://github.com/Yonoha/dagger-models-lean-part-i/releases/tag/catalogue-20261125).
+> It retains the same 40 result statements and moves longer implementation references
+> to the linked declaration index. The v0.2.0-rc1 release and its receipts below are
+> preserved as the earlier formalization snapshot.
+
 # Part I companion publication: v0.2.0-rc1
 
 This release candidate contains the original A/B/C/D formalization snapshot and an English catalogue prepared as a companion to Part I. The author authorized publication on October 19, 2026.

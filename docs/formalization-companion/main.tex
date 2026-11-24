@@ -8,7 +8,7 @@
 \usepackage{xurl}
 \usepackage{needspace}
 \input{part1-notation.tex}
-\hypersetup{pdftitle={Lean Formalization Companion to Models for Dagger (Infinity,1)-Categories I},pdfauthor={Keima Akasaka}}
+\hypersetup{pdftitle={Models for Dagger (Infinity,1)-Categories I: Concise Lean Formalization Catalogue},pdfauthor={Keima Akasaka; AI-assisted catalogue}}
 \setlist{nosep,leftmargin=2em}
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.2em}
@@ -16,7 +16,7 @@
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
-\newenvironment{resultblock}{\par\noindent\begin{minipage}{\linewidth}}{\end{minipage}\par}
+\newenvironment{resultblock}{\par\noindent\begin{minipage}{\linewidth}}{\end{minipage}\par\medskip}
 \newcommand{\Cat}{\mathrm{Cat}}
 \newcommand{\Type}{\mathrm{Type}}
 \newcommand{\Cof}{\operatorname{Cof}}
@@ -25,16 +25,18 @@
 \newcommand{\LLP}{\operatorname{LLP}}
 \newcommand{\Sat}{\operatorname{Sat}}
 \newcommand{\Lean}[1]{\par\smallskip{\footnotesize\ttfamily\raggedright\nolinkurl{#1}\par}}
-\newcommand{\Evidence}[2]{\par{\footnotesize\textbf{Lean}\quad\nolinkurl{#1}\par\textbf{Source}\quad\nolinkurl{#2}\par}}
-\newcommand{\Origin}[1]{\par{\small\textbf{Provenance}\quad #1\par}\medskip}
-\title{Lean Formalization Companion to\\[0.3em]Models for Dagger $(\infty,1)$-Categories I\\[0.6em]{\large A Catalogue of Major Formalized Results}}
-\author{Keima Akasaka}
-\date{October 19, 2026}
+\newcommand{\Repo}{https://github.com/Yonoha/dagger-models-lean-part-i}
+\newcommand{\CatalogueTag}{catalogue-20261125}
+\newcommand{\Evidence}[2]{\par\smallskip{\footnotesize
+  \href{\Repo/blob/\CatalogueTag/docs/formalization-companion/RESULT_INDEX.md\#result-\thesection-\arabic{theorem}}{Lean declarations, source files and provenance}\par}}
+\newcommand{\FoundationEvidence}[2]{\par\smallskip{\footnotesize
+  \href{\Repo/blob/\CatalogueTag/docs/formalization-companion/RESULT_INDEX.md\#reused-foundations}{Reused declarations and source files}\par}}
+\title{Models for Dagger $(\infty,1)$-Categories I\\[0.5em]{\large A Concise Catalogue of Major Lean-Formalized Results}}
+\author{Keima Akasaka\\{\small AI-assisted formalization catalogue}}
+\date{November 25, 2026}
 \begin{document}
-\setcounter{tocdepth}{1}
 \maketitle
 \input{overview.tex}
-\tableofcontents
 \clearpage
 \input{main-results.tex}
 \input{dagger-results.tex}

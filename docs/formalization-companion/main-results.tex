@@ -16,7 +16,6 @@ A functor $p:\mathcal C\to\mathcal D$ is a trivial fibration if and only if it i
 $\mathcal C(x,y)\to\mathcal D(px,py)$ is a trivial Kan fibration.
 \end{theorem}
 \Evidence{DaggerComparator.mainA}{MainTheoremsA.lean:11; ChallengeTheoremA.lean:42}
-\Origin{Theorem A of Part I, including the model classes, generating data, trivial-fibration criterion, and left properness for the same model structure. The ordinary Kan--Quillen foundations are reused.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -37,7 +36,6 @@ Moreover, the original dagger rigidification--nerve adjunction
 is a Quillen equivalence.
 \end{theorem}
 \Evidence{DaggerComparator.mainB}{MainTheoremsBCD.lean:14; ChallengeActualMainTheoremB.lean:17,25}
-\Origin{Theorem B of Part I. The comparison uses the original dagger lift of ordinary rigidification and the same standard dagger Joyal model appearing in the model-structure statement.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -45,7 +43,7 @@ is a Quillen equivalence.
 Let $f:X\to Y$ be a dagger morphism between dagger quasi-categories.
 Full faithfulness means that, for every ordered pair of vertices $x,y\in X_0$, the induced map on the specified mapping fibers
 \begin{align}
-\Map_X(x,y)\longrightarrow\Map_Y(fx,fy)
+\Map_X(x,y)\to\Map_Y(fx,fy)
 \end{align}
 is a weak homotopy equivalence.
 The following conditions are equivalent:
@@ -58,7 +56,6 @@ All conditions use the same original unitary-core functor $\calU$.
 The full-faithfulness condition includes the case $x=y$.
 \end{theorem}
 \Evidence{DaggerComparator.originalMainTheoremC}{MainTheoremsBCD.lean:18; ChallengeOriginalMainTheoremC.lean:14,19,23,27}
-\Origin{Theorem C of Part I. The statement applies to every dagger morphism between dagger quasi-categories and relates local weak equivalences to unitary essential surjectivity.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -79,5 +76,4 @@ In addition, restriction along the original inclusion $q_{\rmtag}^*$ does not re
 \end{align}
 \end{theorem}
 \Evidence{DaggerComparator.mainD}{MainTheoremsBCD.lean:22; ChallengeActualMainTheoremD.lean:11}
-\Origin{Theorem D of Part I, together with the construction of the precise source model used in the formal statement. The obstruction concerns these specified models and adjunctions.}
 \end{resultblock}

@@ -13,7 +13,6 @@ Then $I$ satisfies the small object argument relative to $w$.
 In particular, no separate cardinal condition on individual generators is needed: the relative-cell colimit condition is verified at $\aleph_0$.
 \end{theorem}
 \Evidence{DaggerModels.SmallObjectFiniteDomains.hasSmallObjectArgument}{DaggerModels/SmallObjectFiniteDomains.lean:56}
-\Origin{A general bridge proved in this formalization and applied to Mathlib's small object argument. The three universes and the smallness, colimit, and finite-presentability hypotheses remain explicit.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -31,7 +30,6 @@ The final inclusion applies to maps with arbitrary source and target.
 These conclusions alone do not identify boundary right lifting with weak homotopy equivalence or with trivial fibrations.
 \end{theorem}
 \Evidence{DaggerModels.SSetBoundaryCells.exists_relativeCellComplex; DaggerModels.SSetBoundaryCells.boundaryCells_eq_monomorphisms; DaggerModels.SSetBoundaryCells.I_rlp_eq_monomorphisms_rlp; DaggerModels.SSetBoundaryFibration.boundary_rlp_le_fibrations}{DaggerModels/SSetBoundaryCells.lean:28,44,55; DaggerModels/SSetBoundaryFibration.lean:159}
-\Origin{A boundary-cell construction and its lifting consequences proved here for ordinary simplicial sets, using Mathlib's boundary inclusions and Kan-fibration predicate.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -45,7 +43,6 @@ C\text{ is }\kappa\text{-locally presentable}.
 \end{align}
 \end{proposition}
 \Evidence{DaggerLocallyPresentableRankPromotion.locallyPresentable_of_le}{LocallyPresentableRankPromotion.lean:9}
-\Origin{A general proposition proved here using Mathlib's strong-generator criterion. Pullbacks and the regularity of both cardinals are retained as hypotheses.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -60,7 +57,6 @@ L(f)\text{ is an isomorphism in }H.
 The object and Hom universes of $C$ and $H$ may be chosen independently.
 \end{theorem}
 \Evidence{DaggerNativeAllCofibrantLocalizationSaturation.weakEquivalence_iff_localization_isIso}{NativeAllCofibrantLocalizationSaturation.lean:32}
-\Origin{A general detection theorem proved here. It assumes an existing model structure and localization; it does not construct a Bousfield localization.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -72,7 +68,6 @@ For every value universe $u$, the categories of ordinary simplicial sets and bis
 \end{align}
 \end{proposition}
 \Evidence{DaggerNativeSSetLocallyPresentable.locallyFinitelyPresentable; DaggerNativeBisimplicialLocallyPresentable.locallyFinitelyPresentable}{NativeSSetLocallyPresentable.lean:17; NativeBisimplicialLocallyPresentable.lean:14}
-\Origin{Concrete applications in this formalization of Mathlib's results on presheaf categories and strong generators. They supply ambient-category hypotheses for the small object and Smith constructions.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -91,7 +86,6 @@ f &= r_J(f)\circ\ell_J(f),
 \end{align}
 \end{theorem}
 \Evidence{DaggerModels.DaggerSmallObject.generators_hasFunctorialFactorization; DaggerFixedCategorySmallObject.I_hasFunctorialFactorization; DaggerFixedCategorySmallObject.J_hasFunctorialFactorization}{DaggerModels/DaggerSmallObject.lean:51; FixedCategorySmallObject.lean:31,35}
-\Origin{Concrete applications of the general small object argument after finite presentability is proved for the relevant domains. These factorizations alone do not identify a weak-equivalence class or establish a model structure.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -111,7 +105,6 @@ F\in\Fib
 Cofibrations are the left lifting class of the specified trivial fibrations in this category.
 \end{theorem}
 \Evidence{DaggerOriginalFixedObjectStrictDaggerModel.strictDaggerModel; DaggerOriginalFixedObjectStrictDaggerModel.model_weakEquivalence_iff; DaggerOriginalFixedObjectStrictDaggerModel.model_fibration_iff}{OriginalFixedObjectStrictDaggerModel.lean:20,24,30,35; OriginalFixedObjectDaggerCategories.lean:87,91}
-\Origin{A concrete model structure established here after the required factorizations are proved. The fixed-object category retains the original dagger enrichment and strictness. This theorem does not establish the simplicial model axioms or all of Theorem C.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -125,7 +118,6 @@ Indeed, every normal monomorphism admits a countable relative-cell presentation:
 \end{align}
 \end{theorem}
 \Evidence{DaggerModels.OriginalAntiInvolutiveNormalGeneratorRecognition.normalMonos_eq_normalGeneratorSaturation; DaggerModels.OriginalAntiInvolutiveNormalGeneratorRecognition.normalMono_mem_transfinite_pushouts}{OriginalAntiInvolutiveNormalGeneratorRecognition.lean:164,127}
-\Origin{A concrete generation theorem proved here with the original normality predicate and free boundary maps in all degrees, rather than a positive-degree substitute.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -142,7 +134,6 @@ Here $Z^f$ denotes precomposition with $f$ on the internal Hom.
 The identifications of the generated left and right classes are equalities for these specified Smith data.
 \end{theorem}
 \Evidence{DaggerNativeOriginalJoyalSmithModelData.modelData; DaggerNativeOriginalJoyalSmithModelData.generated_left_eq; DaggerNativeOriginalJoyalSmithModelData.generated_right_eq; DaggerActualDCHRightInducedAndMainTheoremD.ordinaryJoyalModel}{NativeOriginalJoyalSmithModelData.lean:12,25,29; ActualDCHRightInducedAndMainTheoremD.lean:45}
-\Origin{A concrete Smith application assembled here for ordinary simplicial sets, not a new proof of a general Smith recognition theorem. It supplies the ordinary model used in the next comparison.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -161,7 +152,6 @@ These are the classes of the same concrete model used in Theorem D; its two non-
 Nor does this construction assert a general right-induced transfer theorem for arbitrary right adjoints.
 \end{theorem}
 \Evidence{DaggerActualOriginalAntiJoyalSmithModelData.modelData; DaggerActualDCHRightInducedAndMainTheoremD.model; DaggerActualDCHRightInducedAndMainTheoremD.cofibration_iff_normal; DaggerActualDCHRightInducedAndMainTheoremD.weakEquivalence_iff_underlying; DaggerActualDCHRightInducedAndMainTheoremD.fibration_iff_underlying}{ActualOriginalAntiJoyalSmithModelData.lean:20; ActualDCHRightInducedAndMainTheoremD.lean:15,22,56,64}
-\Origin{A concrete Smith application in the anti-involutive category and an identification of right-induced weak equivalences and fibrations relative to the constructed ordinary Joyal model. This is the existence component of the model used in Theorem D.}
 \end{resultblock}
 
 \subsection{Foundational Results Reused from Existing Formalizations}
@@ -172,5 +162,5 @@ Alongside Mathlib's model-category and small-object-argument infrastructure, we 
 \href{https://github.com/joelriou/topcat-model-category/tree/6c0c356fea469689fe76baeb47ba773460dfacee}{\texttt{TopCatModelCategory}}.
 In particular, for any Kan fibration $p:E\to B$, boundary right lifting satisfies $I^{\square}(p)\Leftrightarrow p\in W$, and ordinary $\sSet$ carries the Quillen model structure.
 These are reused upstream proofs, not independent new proofs in this formalization.
-\Evidence{SSet.modelCategoryQuillen.weakEquivalence_iff_of_fibration; SSet.modelCategoryQuillen.rlp_I_eq_trivialFibrations; SSet.modelCategoryQuillen.inst}{TopCatModelCategory/SSet/KeyLemma.lean:150; TopCatModelCategory/ModelCategorySSet.lean:20,51}
+\FoundationEvidence{SSet.modelCategoryQuillen.weakEquivalence_iff_of_fibration; SSet.modelCategoryQuillen.rlp_I_eq_trivialFibrations; SSet.modelCategoryQuillen.inst}{TopCatModelCategory/SSet/KeyLemma.lean:150; TopCatModelCategory/ModelCategorySSet.lean:20,51}
 \end{quote}

@@ -24,7 +24,6 @@ This is not the adjunction between topological realization and the ordinary
 singular complex of a topological space.
 \end{theorem}
 \Evidence{DaggerActualQQuillenEquivalence.isQuillenEquivalence; DaggerActualQKanCounitWeakEquivalence.counit_weakEquivalence}{ActualQQuillenEquivalence.lean:17; ActualQKanCounitWeakEquivalence.lean:24}
-\Origin{The construction and comparison for the original right-cone object $Q_{\mathrm{rc}}$ are proved in this formalization, using the existing Kan model structure and Mathlib's Quillen-equivalence criterion. This is an ordinary simplicial-set result, distinct from the dagger rigidification result in Theorem B.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -43,7 +42,6 @@ The assertion concerns this $C_2$-action category; it does not claim the same
 construction unconditionally for every group.
 \end{theorem}
 \Evidence{DaggerOriginalSimplicialActionModelCategory.modelStructure; DaggerOriginalSimplicialActionModelCategory.weakEquivalence_iff_underlying; DaggerOriginalSimplicialActionModelCategory.fibration_iff_underlying}{OriginalSimplicialActionModelCategory.lean:126,58,131}
-\Origin{The free-boundary and free-horn generators, finite-source smallness, and closure of weak equivalences are verified for this action category. The construction uses Mathlib, the ported TopPackage machinery, and the ordinary Kan model structure; it does not present that general machinery as a new theorem.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -58,7 +56,6 @@ The result uses that particular topological model structure and makes no claim
 about a different category of topological spaces.
 \end{theorem}
 \Evidence{DaggerOriginalBorelModelCategory.modelStructure; DaggerOriginalBorelModelCategory.weakEquivalence_iff_underlying; DaggerOriginalBorelModelCategory.fibration_iff_underlying; DaggerOriginalBorelModelCategory.cofibration_iff_original}{OriginalBorelModelCategory.lean:73,79,85,91}
-\Origin{This is a concrete model construction for the action category, using free realized boundaries and horns and finite free realization sources. The underlying topological q-model and package machinery are reused from pinned TopCatModelCategory sources; their upstream proofs are not claimed as new independent proofs here.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -75,7 +72,6 @@ The latter does not assert equivariant contractibility or contractibility of
 fixed-point spaces.
 \end{theorem}
 \Evidence{DaggerOriginalEC2SimplicialProjectiveCofibrancy.originalSimplicialEC2_isCofibrant; DaggerOriginalEC2RealizationContractibility.realizedContractibleSpace; DaggerOriginalEC2EquivariantRelativeCellComplex.equivariantRelativeCellComplex}{OriginalEC2SimplicialProjectiveCofibrancy.lean:60; OriginalEC2RealizationContractibility.lean:58; OriginalEC2EquivariantRelativeCellComplex.lean:84}
-\Origin{The action, skeletal pushouts, equivariant relative cell complex, and simplicial contraction are constructed for the original $E_{\bullet}C_2$. General cell-complex and topological-realization APIs are reused from Mathlib and TopCat.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -88,7 +84,6 @@ The case $k=0$ includes the Kan property of the ordinary left mapping space.
 The stated result retains the quasi-category hypothesis on $X$.
 \end{proposition}
 \Evidence{DaggerActualQuasicategoryMappingFibres.prefixMapping_kan; DaggerActualQuasicategoryMappingFibres.leftMapping_kan}{ActualQuasicategoryMappingFibres.lean:32,37}
-\Origin{The proof uses lifting for the original coslice projection and the Kan criterion for its fibers. The statement covers every prefix simplex and terminal vertex, rather than an individual simplicial face calculation.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -98,13 +93,12 @@ categorical weak equivalence, and let $a,b\in X_0$.
 The induced map of the original right-cone mapping spaces
 \begin{align}
  \Map^{R}_{X}(a,b)
-  &\longrightarrow \Map^{R}_{Y}(f(a),f(b))
+  &\to \Map^{R}_{Y}(f(a),f(b))
 \end{align}
 is a weak equivalence of ordinary simplicial sets.
 No monomorphism or Kan-fibration assumption is imposed on $f$.
 \end{theorem}
 \Evidence{DaggerActualRightMappingWeakInvariance.map_weak_of_categorical_weak}{ActualRightMappingWeakInvariance.lean:36}
-\Origin{The proof uses the original right-cone mapping spaces, a span for categorical weak equivalences, and lifting. It is distinct from the unitary-core criterion in the dagger Theorem C.}
 \end{resultblock}
 
 \begin{resultblock}
@@ -122,5 +116,4 @@ simplicial operators.
 No additional naturality statement in $D,v,w$ is asserted here.
 \end{theorem}
 \Evidence{DaggerActualRightConeSingularComparisonIso.comparisonIso; DaggerActualRightConeSingularComparisonIso.comparison_app_bijective}{ActualRightConeSingularComparisonIso.lean:43,17}
-\Origin{The isomorphism compares the original cone evaluation with the original $Q_{\mathrm{rc}}$-singular construction. It concerns mapping objects and is separate from the ordinary rigidification--coherent-nerve adjunction itself.}
 \end{resultblock}

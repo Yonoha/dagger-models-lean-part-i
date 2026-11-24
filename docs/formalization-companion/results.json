@@ -1,0 +1,1085 @@
+{
+  "catalogue_tag": "catalogue-20261125",
+  "proof_source_commit": "9ee62295a79ef61269259e27216afc0292458931",
+  "ai_generated_prose": true,
+  "group_count": 40,
+  "grouped_declaration_count": 88,
+  "grouped_source_count": 56,
+  "declaration_count_including_reused_foundations": 91,
+  "source_count_including_reused_foundations": 58,
+  "entries": [
+    {
+      "id": "1.1",
+      "anchor": "result-1-1",
+      "title_tex": "A: the dagger Bergner model structure",
+      "kind": "theorem",
+      "statement_tex": "There is a left proper combinatorial model structure $\\sCat^{\\dag}_{\\Bergner}$ on $\\sCat^{\\dag}$ with the prescribed generating cofibrations $I_{\\dag}$, generating trivial cofibrations $J_{\\dag}$, and dagger DK-equivalences $W_{\\dag}$.\nIts three classes are\n\\begin{align}\n\\mathrm{Cof}&=I_{\\dag}\\text{-}\\cof,&\n\\mathrm{Fib}&=J_{\\dag}\\text{-}\\inj,&\n\\mathrm{W}&=W_{\\dag}.\n\\end{align}\nHere $W_{\\dag}$ consists of local weak homotopy equivalences that are essentially surjective up to coherently unitary equivalence, using the specified standard fibrant replacement.\nThe underlying category is locally finitely presentable, both generating families are small, and the domain of every generating map is finitely presentable.\nA functor $p:\\mathcal C\\to\\mathcal D$ is a trivial fibration if and only if it is surjective on objects and every map\n$\\mathcal C(x,y)\\to\\mathcal D(px,py)$ is a trivial Kan fibration.",
+      "declarations": [
+        "DaggerComparator.mainA"
+      ],
+      "sources": [
+        {
+          "path": "lean/MainTheoremsA.lean",
+          "lines": [
+            11
+          ],
+          "sha256": "fcd075451ab72dedb96b1adb0463775d6fd728ff80104e8aeaf7497c725e13d6"
+        },
+        {
+          "path": "lean/ChallengeTheoremA.lean",
+          "lines": [
+            42
+          ],
+          "sha256": "2591c2201f9dea1f9c533878c996a89669426d89516655c475308e138ee7dfcf"
+        }
+      ],
+      "provenance_tex": "Theorem A of Part I, including the model classes, generating data, trivial-fibration criterion, and left properness for the same model structure. The ordinary Kan--Quillen foundations are reused.",
+      "tex_file": "main-results.tex"
+    },
+    {
+      "id": "1.2",
+      "anchor": "result-1-2",
+      "title_tex": "B: the dagger Joyal model and its Quillen equivalence",
+      "kind": "theorem",
+      "statement_tex": "There is a left proper combinatorial model structure $\\sSet^{\\dag}_{\\Joyal}$ on $\\sSet^{\\dag}$ with\n\\begin{align}\n\\mathrm{Cof}&=I^{\\sSet}_{\\dag}\\text{-}\\cof=\\{\\text{free cofibrations}\\},\\\\\nf\\in W^{\\sSet}_{\\dag}&\\Longleftrightarrow\\frakC_{\\dag}(f)\\in W_{\\dag},\\\\\n\\mathrm{Fib}&=(\\mathrm{Cof}\\cap W^{\\sSet}_{\\dag})^{\\square}.\n\\end{align}\nThe trivial cofibrations also have a small generating family.\nA map $p$ is a trivial fibration if and only if $\\UdagSSet(p)$ is a trivial Kan fibration.\nMoreover, the original dagger rigidification--nerve adjunction\n\\begin{align}\n\\frakC_{\\dag}:\\sSet^{\\dag}_{\\Joyal}\n\\ \\rightleftarrows\\ \\sCat^{\\dag}_{\\Bergner}:N_{\\dag}\n\\end{align}\nis a Quillen equivalence.",
+      "declarations": [
+        "DaggerComparator.mainB"
+      ],
+      "sources": [
+        {
+          "path": "lean/MainTheoremsBCD.lean",
+          "lines": [
+            14
+          ],
+          "sha256": "0e326733f08aa4f4defc20ecee3df60fb37e0e89b60e320fc4ff1d24afc951b0"
+        },
+        {
+          "path": "lean/ChallengeActualMainTheoremB.lean",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "3e7772dd1673d3fee9e58de66475c2d2678ecc19daba4d55f17cfd15d4d24292"
+        }
+      ],
+      "provenance_tex": "Theorem B of Part I. The comparison uses the original dagger lift of ordinary rigidification and the same standard dagger Joyal model appearing in the model-structure statement.",
+      "tex_file": "main-results.tex"
+    },
+    {
+      "id": "1.3",
+      "anchor": "result-1-3",
+      "title_tex": "C: intrinsic recognition of dagger Joyal equivalences",
+      "kind": "theorem",
+      "statement_tex": "Let $f:X\\to Y$ be a dagger morphism between dagger quasi-categories.\nFull faithfulness means that, for every ordered pair of vertices $x,y\\in X_0$, the induced map on the specified mapping fibers\n\\begin{align}\n\\Map_X(x,y)\\to\\Map_Y(fx,fy)\n\\end{align}\nis a weak homotopy equivalence.\nThe following conditions are equivalent:\n\\begin{enumerate}\n\\item $f$ belongs to $W^{\\sSet}_{\\dag}$, equivalently it is a weak equivalence in $\\sSet^{\\dag}_{\\Joyal}$;\n\\item $f$ is fully faithful and $\\pi_0\\calU(f):\\pi_0\\calU(X)\\to\\pi_0\\calU(Y)$ is surjective;\n\\item $f$ is fully faithful and $\\calU(f):\\calU(X)\\to\\calU(Y)$ is a weak homotopy equivalence.\n\\end{enumerate}\nAll conditions use the same original unitary-core functor $\\calU$.\nThe full-faithfulness condition includes the case $x=y$.",
+      "declarations": [
+        "DaggerComparator.originalMainTheoremC"
+      ],
+      "sources": [
+        {
+          "path": "lean/MainTheoremsBCD.lean",
+          "lines": [
+            18
+          ],
+          "sha256": "0e326733f08aa4f4defc20ecee3df60fb37e0e89b60e320fc4ff1d24afc951b0"
+        },
+        {
+          "path": "lean/ChallengeOriginalMainTheoremC.lean",
+          "lines": [
+            14,
+            19,
+            23,
+            27
+          ],
+          "sha256": "cd2c8af45e17c1fba6a30e2b5d692a32fa31fc6525801a3786ffb11a4dd5a00f"
+        }
+      ],
+      "provenance_tex": "Theorem C of Part I. The statement applies to every dagger morphism between dagger quasi-categories and relates local weak equivalences to unitary essential surjectivity.",
+      "tex_file": "main-results.tex"
+    },
+    {
+      "id": "1.4",
+      "anchor": "result-1-4",
+      "title_tex": "D: the anti-involutive model and the comparison obstruction",
+      "kind": "theorem",
+      "statement_tex": "There is a model structure $\\sSet^{\\AInv}_{\\DCH}$ whose cofibrations are the original normal monomorphisms, whose weak equivalences are the prescribed anti-Joyal mapping weak equivalences, and whose fibrations are the prescribed underlying Joyal candidate fibrations.\nFor this model and the dagger Joyal model of Theorem B, neither of the original tagged-quotient adjunctions\n\\begin{align}\nq_{\\rmtag,!}:\\sSet^{\\AInv}_{\\DCH}\n&\\ \\rightleftarrows\\ \\sSet^{\\dag}_{\\Joyal}:q_{\\rmtag}^*,\\\\\nq_{\\rmtag}^*:\\sSet^{\\dag}_{\\Joyal}\n&\\ \\rightleftarrows\\ \\sSet^{\\AInv}_{\\DCH}:q_{\\rmtag,*}\n\\end{align}\nis a Quillen adjunction.\nIn addition, restriction along the original inclusion $q_{\\rmtag}^*$ does not recover the dagger Joyal cofibrations:\n\\begin{align}\n\\neg\\,\\forall f\\text{ in }\\sSet^{\\dag},\\quad\n\\Cof_{\\Joyal}(f)\\ \\Longleftrightarrow\\ \\Cof_{\\DCH}(q_{\\rmtag}^*f).\n\\end{align}",
+      "declarations": [
+        "DaggerComparator.mainD"
+      ],
+      "sources": [
+        {
+          "path": "lean/MainTheoremsBCD.lean",
+          "lines": [
+            22
+          ],
+          "sha256": "0e326733f08aa4f4defc20ecee3df60fb37e0e89b60e320fc4ff1d24afc951b0"
+        },
+        {
+          "path": "lean/ChallengeActualMainTheoremD.lean",
+          "lines": [
+            11
+          ],
+          "sha256": "151e54f44f140cf227a0821f2b81467f94545c1ce9b0c3c61e494d55b391edc7"
+        }
+      ],
+      "provenance_tex": "Theorem D of Part I, together with the construction of the precise source model used in the formal statement. The obstruction concerns these specified models and adjunctions.",
+      "tex_file": "main-results.tex"
+    },
+    {
+      "id": "2.1",
+      "anchor": "result-2-1",
+      "title_tex": "Presheaves on the reversal simplex category",
+      "kind": "theorem",
+      "statement_tex": "Let $\\prism_{\\rev}$ be the reversal simplex category of Part~I.\nFor every universe $u$ there is an equivalence of categories\n\\begin{align}\n  \\sSet^{\\dag}\n    &\\simeq \\Fun(\\prism_{\\rev}^{\\myop},\\Set_u).\n\\end{align}\nThe dagger fixes vertices, and the actions of monotone and antitone maps in $\\prism_{\\rev}$ agree on their overlap.",
+      "declarations": [
+        "DaggerModels.nonempty_daggerSSetEquivalencePresheaf"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/Presheaf.lean",
+          "lines": [
+            384
+          ],
+          "sha256": "f9408fd5ba5ac08644bbdb2dce9ae559ff764b4edb94eb54c1f46d37d518c46d"
+        }
+      ],
+      "provenance_tex": "The equivalence is constructed for the dagger simplicial sets of Part~I; it is not an existing Mathlib equivalence invoked under a new name.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.2",
+      "anchor": "result-2-2",
+      "title_tex": "Local finite presentability of dagger simplicial sets",
+      "kind": "theorem",
+      "statement_tex": "For every universe $u$, the category $\\sSet^{\\dag}$ is locally finitely presentable at level $u$.\nIn particular, it is locally presentable.",
+      "declarations": [
+        "DaggerModels.daggerSSetLocallyFinitelyPresentable",
+        "DaggerModels.daggerSSetLocallyPresentable"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/Presentable.lean",
+          "lines": [
+            75,
+            83
+          ],
+          "sha256": "a44a11680680fe07d6fbd6ae1e8d022f43c99e78d501e0d762384c508fa129df"
+        }
+      ],
+      "provenance_tex": "The preceding project-specific presheaf equivalence transports Mathlib's presentability results for presheaf categories without changing the universe of values.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.3",
+      "anchor": "result-2-3",
+      "title_tex": "The free dagger simplicial-set adjunction",
+      "kind": "theorem",
+      "statement_tex": "For every universe $u$, the forgetful functor $\\UdagSSet$ to ordinary simplicial sets has a left adjoint $\\FdagSSet$:\n\\begin{align}\n  \\FdagSSet:\\sSet&\\to\\sSet^{\\dag},\n  &\\FdagSSet&\\dashv\\UdagSSet.\n\\end{align}",
+      "declarations": [
+        "DaggerModels.exists_freeDaggerAdjunction"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/FreeDagger.lean",
+          "lines": [
+            57
+          ],
+          "sha256": "a09d001f2b71248c5d3bd499c33afe85c3720e62e42e79e43e41414e006a1d81"
+        }
+      ],
+      "provenance_tex": "A left Kan extension along the ordinary-simplex inclusion into the reversal simplex category, transported through the presheaf equivalence, gives the original forgetful functor its left adjoint. The explicit pushout description is the separate result below.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.4",
+      "anchor": "result-2-4",
+      "title_tex": "Free completion as a pushout over the zeroth skeleton",
+      "kind": "theorem",
+      "statement_tex": "Let $\\FdagSSet$ be any chosen left adjoint to $\\UdagSSet$, with unit $\\eta$.\nFor each simplicial set $A$ there is a natural second inclusion $r_A:A^{\\myop}\\to \\UdagSSet\\FdagSSet(A)$.\nWriting $A^{(0)}=\\sk_0A$ for the zeroth skeleton, the square\n\\begin{align}\n  \\begin{array}{ccc}\n    A^{(0)}&\\to&A^{\\myop}\\\\\n    \\big\\downarrow&&\\big\\downarrow\\scriptstyle r_A\\\\\n    A&\\xrightarrow{\\ \\eta_A\\ }&\\UdagSSet\\FdagSSet(A)\n  \\end{array}\n\\end{align}\nis a pushout.\nMoreover, $A^{(0)}$ is isomorphic to Lean's $(A.\\mathrm{skeleton}\\ 1).\\mathrm{toSSet}$, and $\\eta_A$ and $r_A$ satisfy both interchange equations for the dagger on the free object.\nLean's \\texttt{skeleton 1} denotes the zeroth skeleton in this formalization, not the ordinary one-dimensional skeleton.",
+      "declarations": [
+        "DaggerModels.freeDagger_pushout",
+        "DaggerModels.freeDagger_skeleton_pushout"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/FreeDaggerPushout.lean",
+          "lines": [
+            312
+          ],
+          "sha256": "a50a9f60866d76a9f287ca34c261dfeed3c87b9635911de6392a5076cd6a4a94"
+        },
+        {
+          "path": "lean/DaggerModels/FreeDaggerSkeleton.lean",
+          "lines": [
+            19
+          ],
+          "sha256": "c49de786dc4a2ecb69a2c8c5856bf001b781d5e948fa163495df367e096d9362"
+        }
+      ],
+      "provenance_tex": "The common vertices, both inclusions, the adjunction unit, and the dagger interchange equations are constructed together.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.5",
+      "anchor": "result-2-5",
+      "title_tex": "Images of monomorphisms under free completion",
+      "kind": "proposition",
+      "statement_tex": "Let $\\FdagSSet\\dashv\\UdagSSet$ be any chosen free--forgetful adjunction.\nIf $i:K\\to L$ is a monomorphism of simplicial sets, then $\\FdagSSet(i)$ is a free cofibration.",
+      "declarations": [
+        "DaggerModels.freeDagger_map_freeCofibration"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/FreeDaggerCofibration.lean",
+          "lines": [
+            194
+          ],
+          "sha256": "b880e79f7b6e15e859b2b343afe1efa85983486431ead177ffe379166660a6b0"
+        }
+      ],
+      "provenance_tex": "The proof uses the concrete pushout and positive-dimensional nondegenerate simplices. The conclusion concerns the specified free-cofibration predicate.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.6",
+      "anchor": "result-2-6",
+      "title_tex": "Free-boundary cell presentation of free cofibrations",
+      "kind": "theorem",
+      "statement_tex": "Let $\\FdagSSet\\dashv\\UdagSSet$ be any chosen free--forgetful adjunction, and let $I^{\\sSet}_{\\dag}$ be the family of free boundary inclusions $\\FdagSSet(\\partial\\Delta^n)\\to\\FdagSSet(\\Delta^n)$ in all degrees, as in Part~I.\nEvery free cofibration is a relative $I^{\\sSet}_{\\dag}$-cell complex.\nAs classes of morphisms,\n\\begin{align}\n  I^{\\sSet}_{\\dag}\\text{-}\\cof\n    &= \\{f\\mid f\\text{ is a free cofibration}\\}.\n\\end{align}\nOn the left, $I^{\\sSet}_{\\dag}\\text{-}\\cof$ is the closure of the free boundary inclusions under coproducts, pushouts, transfinite compositions, and retracts.",
+      "declarations": [
+        "DaggerModels.exists_relativeFreeBoundaryCellComplex",
+        "DaggerModels.freeBoundarySaturation_eq"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/RelativeCellPresentation.lean",
+          "lines": [
+            91,
+            99
+          ],
+          "sha256": "d611aa6aafa392c4eb5314bba21e2211b7858bcc868292900dd17306949008d0"
+        }
+      ],
+      "provenance_tex": "The relative skeletal filtration and its attaching pushouts give the cell presentation; individual closure lemmas are subsumed here.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.7",
+      "anchor": "result-2-7",
+      "title_tex": "Free cofibrations need not be normal monomorphisms",
+      "kind": "proposition",
+      "statement_tex": "In every universe $u$ there is a morphism $f:X\\to Y$ of dagger simplicial sets that is a free cofibration, while its image among anti-involutive simplicial sets is not a normal monomorphism.",
+      "declarations": [
+        "DaggerModels.DaggerSSet.exists_freeCofibration_not_normalMono"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/NormalCofibrationObstruction.lean",
+          "lines": [
+            143
+          ],
+          "sha256": "a1a6d36e61ac97b7705eecea7b8317bef65e5c2eb7ddb5a8df1803b9c6f656ac"
+        }
+      ],
+      "provenance_tex": "The counterexample uses the map from the initial object to the point object. It makes no general assertion about the cofibration classes of two model structures.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.8",
+      "anchor": "result-2-8",
+      "title_tex": "Ordinary equivalence need not be unitarily essentially surjective",
+      "kind": "proposition",
+      "statement_tex": "There are dagger categories $\\mathcal C,\\mathcal D$ on small groupoids and a dagger-preserving functor $G:\\mathcal C\\to\\mathcal D$ that is full, faithful, and an equivalence of ordinary categories, but is not essentially surjective by unitary isomorphisms.",
+      "declarations": [
+        "DaggerModels.UnitaryObstruction.exists_equivalence_not_unitarilyEssentiallySurjective"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/UnitaryObstruction.lean",
+          "lines": [
+            168
+          ],
+          "sha256": "7df9b65823bf6affe9c6d230b6290b814d7089ff08470bcf077cd9f92f58fa80"
+        }
+      ],
+      "provenance_tex": "A concrete two-object integer dagger groupoid supplies the example. The cited declaration does not include subsequent claims about nerves or weak equivalences.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.9",
+      "anchor": "result-2-9",
+      "title_tex": "Free dagger simplicial categories",
+      "kind": "theorem",
+      "statement_tex": "For every universe $u$ and dagger simplicial graph $G$, there are a free dagger simplicial category $\\FCatDag(G)$ and a graph map $\\eta_G:G\\to\\UCatDag\\FCatDag(G)$.\nRestriction along $\\eta_G$ classifies functors from $\\FCatDag(G)$ to any dagger simplicial category by a bijection; hence $\\FCatDag\\dashv\\UCatDag$.",
+      "declarations": [
+        "DaggerModels.exists_freeDaggerSimplicialCategory",
+        "DaggerModels.FreeDaggerSimplicialCategory.exists_freeDaggerSimplicialCategoryAdjunction"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/FreeDaggerSimplicialCategory.lean",
+          "lines": [
+            115,
+            106
+          ],
+          "sha256": "9f379940c90bfd55794b8fd1092813184d2c36944d3f5384e671eddd6328f26a"
+        }
+      ],
+      "provenance_tex": "The free category is built explicitly from finite paths and their simplicial mapping sets.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.10",
+      "anchor": "result-2-10",
+      "title_tex": "Monadicity over dagger simplicial graphs",
+      "kind": "theorem",
+      "statement_tex": "In a common universe $u$, the forgetful functor $\\UCatDag$ from dagger simplicial categories to dagger simplicial graphs is a monadic right adjoint.",
+      "declarations": [
+        "DaggerModels.DaggerSimplicialCat.forgetGraph_monadic"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/DaggerSimplicialMonadicity.lean",
+          "lines": [
+            92
+          ],
+          "sha256": "187dac1a414a6cfa4cb8ed92c99498f1f119858d5a3d635497724be1a5050888"
+        }
+      ],
+      "provenance_tex": "The free adjunction, reflection of isomorphisms, and graph-split coequalizers are established in the formalization before applying Mathlib's Beck theorem. This is distinct from forgetting to ordinary simplicial categories.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.11",
+      "anchor": "result-2-11",
+      "title_tex": "Dagger simplicial graphs as presheaves",
+      "kind": "theorem",
+      "statement_tex": "For every universe $u$ there is a small category $\\mathcal I$ and an equivalence\n\\begin{align}\n  \\sGph^{\\dag}\n    &\\simeq \\Fun(\\mathcal I^{\\myop},\\Set_u).\n\\end{align}\nConsequently, dagger simplicial graphs are locally finitely presentable at level $u$ and admit all $u$-small limits and colimits.",
+      "declarations": [
+        "DaggerModels.exists_daggerGraphPresheafEquivalence",
+        "DaggerModels.daggerGraphLocallyFinitelyPresentable",
+        "DaggerModels.daggerGraphHasLimits",
+        "DaggerModels.daggerGraphHasColimits"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/DaggerGraphPresheaf.lean",
+          "lines": [
+            36
+          ],
+          "sha256": "52630fc8f9e28a8a2a13dcf5eeaac754b4c0f00bfcd8f3942463ce37cd8efdce"
+        },
+        {
+          "path": "lean/DaggerModels/DaggerGraphPresentable.lean",
+          "lines": [
+            27,
+            19,
+            23
+          ],
+          "sha256": "453aac0061b2fa6590068d378a3c7fcf6b5fa083709ab33aac82836e37226568"
+        }
+      ],
+      "provenance_tex": "The index category and equivalence encode endpoints, simplicial edges, and reversal. Presentability and completeness follow by transport from Mathlib's presheaf results.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.12",
+      "anchor": "result-2-12",
+      "title_tex": "Finitarity of the free-word monad",
+      "kind": "theorem",
+      "statement_tex": "In a common universe $u$ one may choose the free--forgetful adjunction $\\FCatDag\\dashv\\UCatDag$ so that the composite $\\UCatDag\\FCatDag$ is $\\aleph_0$-accessible.",
+      "declarations": [
+        "DaggerModels.DaggerSimplicialCat.exists_finitary_freeDaggerSimplicialCategoryAdjunction"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/FreeWordFinitary.lean",
+          "lines": [
+            135
+          ],
+          "sha256": "09638a09b8829cc210cb3de15d3e3db2a79e61df028779314b30f5a92d10ec0d"
+        }
+      ],
+      "provenance_tex": "The proof analyzes actual finite paths and endpoint pullbacks. It asserts finitarity for this particular monad, not for arbitrary monads.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.13",
+      "anchor": "result-2-13",
+      "title_tex": "Local finite presentability of dagger simplicial categories",
+      "kind": "theorem",
+      "statement_tex": "In every common universe $u$, the category $\\sCat^{\\dag}$ has all $u$-small limits and colimits and is locally finitely presentable at level $u$.\nIn particular, it is locally presentable.",
+      "declarations": [
+        "DaggerModels.daggerSimplicialCatHasLimits",
+        "DaggerModels.daggerSimplicialCatHasColimits",
+        "DaggerModels.daggerSimplicialCatLocallyFinitelyPresentable",
+        "DaggerModels.daggerSimplicialCatLocallyPresentable"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/DaggerSimplicialPresentable.lean",
+          "lines": [
+            16,
+            19,
+            23,
+            28
+          ],
+          "sha256": "1e7ab3b085716f9ba43bcabf0e5b8f1867bfb2afbbe92ffeba1b4241e3cd86c8"
+        }
+      ],
+      "provenance_tex": "Colimits are constructed through semantic quotients of mapping spaces; finitely presentable free-graph generators then give the presentability criterion. This result does not assert a model structure.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.14",
+      "anchor": "result-2-14",
+      "title_tex": "Creation of limits and colimits by ordinary forgetting",
+      "kind": "theorem",
+      "statement_tex": "Let $o$ and $v$ be independent universes for objects and simplicial mapping sets, and let $w,w'$ be independent universes for diagrams.\nThe functor $\\UdagSCat:\\sCat^{\\dag}\\to\\sCat$ creates limits and colimits of size $(w',w)$, also when the object and mapping-set universes are respectively $o$ and $v$.\nIn particular, it lifts a given ordinary universal cone or cocone while retaining its apex.",
+      "declarations": [
+        "DaggerModels.DaggerSimplicialCat.forget_createsLimits",
+        "DaggerModels.DaggerSimplicialCat.forget_createsColimits"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/DaggerOrdinaryCreation.lean",
+          "lines": [
+            14,
+            17
+          ],
+          "sha256": "d59f2c891763cc471b99af478378cd0918029829c2c4af719d6c876540b03ecc"
+        }
+      ],
+      "provenance_tex": "This construction concerns forgetting to ordinary simplicial categories, rather than the monadic forgetful functor to dagger simplicial graphs.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.15",
+      "anchor": "result-2-15",
+      "title_tex": "Two-object free cells and finite presentability",
+      "kind": "theorem",
+      "statement_tex": "For every universe $u$ and simplicial set $K$, there is a two-object free cell $\\bbA_{\\dag}(K)$ with objects $x,y$ and a specified map $K\\to\\bbA_{\\dag}(K)(x,y)$.\nRestriction along this data classifies maps from $\\bbA_{\\dag}(K)$ to any target dagger simplicial category by a bijection.\nIf, in addition, $K$ is a finite simplicial set, then $\\bbA_{\\dag}(K)$ is finitely presentable at level $u$.",
+      "declarations": [
+        "DaggerModels.exists_twoObjectDaggerCell",
+        "DaggerModels.exists_finitelyPresentable_twoObjectDaggerCell"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/TwoObjectDaggerCellUniversal.lean",
+          "lines": [
+            22
+          ],
+          "sha256": "df64de530bd6a3082a01b8624778b16549dee07fa0c19d138df1d4e2d5b84a6c"
+        },
+        {
+          "path": "lean/DaggerModels/TwoObjectCellPresentability.lean",
+          "lines": [
+            58
+          ],
+          "sha256": "fbcacc0fb1a1f6ef8ae4178c3f813c3cdbac0786a92c6c8434008eae81430c99"
+        }
+      ],
+      "provenance_tex": "The cell and its universal property are constructed directly; the finite-presentability conclusion uses Mathlib's result for finite simplicial sets under the stated extra hypothesis.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.16",
+      "anchor": "result-2-16",
+      "title_tex": "Small colimits of ordinary simplicial categories",
+      "kind": "theorem",
+      "statement_tex": "In a common universe $u$, the category $\\sCat$ of ordinary simplicial categories has all $u$-small colimits.",
+      "declarations": [
+        "DaggerModels.simplicialCatHasColimits"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/SimplicialColimits.lean",
+          "lines": [
+            160
+          ],
+          "sha256": "9296c778d0c25bf43d2cc0edfc9815e019d3a5281118c2abf4156bae2a240304"
+        }
+      ],
+      "provenance_tex": "The construction uses free paths and semantic quotients of simplicial mapping sets. It also supplies colimits needed for the ordinary rigidification below.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.17",
+      "anchor": "result-2-17",
+      "title_tex": "Ordinary rigidification, the coherent nerve, and opposites",
+      "kind": "theorem",
+      "statement_tex": "In a common universe $u$, ordinary rigidification $\\frakC:\\sSet\\to\\sCat$, constructed as the left Kan extension of the standard simplex thickening, is left adjoint to the coherent nerve $N$.\nThe latter is naturally isomorphic to Mathlib's simplicial nerve, and rigidification of the standard simplices is naturally isomorphic to their thickening.\nThere is also a natural isomorphism\n\\begin{align}\n  \\frakC\\circ\\mathrm{op}_{\\sSet}\n    &\\cong \\mathrm{op}_{\\sCat}\\circ\\frakC\n\\end{align}\ncompatible with the double-opposite comparison and the double-reversal map of simplicial sets.",
+      "declarations": [
+        "DaggerModels.OrdinaryRigidification.rigidification_coherentNerve_adjunction",
+        "DaggerModels.OrdinaryRigidification.coherentNerve_iso_mathlib",
+        "DaggerModels.OrdinaryRigidification.rigidification_simplex_iso",
+        "DaggerModels.OrdinaryRigidification.RigidificationOpposite.rigidificationOppositeIso",
+        "DaggerModels.OrdinaryRigidification.RigidificationOpposite.rigidificationOppositeIso_coherence"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/OrdinaryRigidification.lean",
+          "lines": [
+            130,
+            135,
+            140
+          ],
+          "sha256": "27a9e7dbafa7c243ccef2322b2b9122ac5e5f827b846e752b00e92d1bfb7028e"
+        },
+        {
+          "path": "lean/DaggerModels/RigidificationOpposite.lean",
+          "lines": [
+            149,
+            165
+          ],
+          "sha256": "949c824cab9dee0c32bc06c6ad1fb4be01b7d3504f4dcd6d23a58a0e57706efc"
+        }
+      ],
+      "provenance_tex": "The construction uses Mathlib's simplex thickening and presheaf Kan-extension API; the natural nerve and opposite comparisons, including coherence, are proved here. These are ordinary simplicial-categorical results.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.18",
+      "anchor": "result-2-18",
+      "title_tex": "Dagger rigidification and its adjunction",
+      "kind": "theorem",
+      "statement_tex": "In a common universe $u$, ordinary rigidification lifts to a functor\n\\begin{align}\n  \\frakC_{\\dag}:\\sSet^{\\dag}\n    &\\to \\sCat^{\\dag}\n\\end{align}\nwith exactly the same underlying enriched functor.\nIt is left adjoint to the dagger coherent nerve $N_{\\dag}$.\nAfter forgetting the dagger, the unit and counit of $\\frakC_{\\dag}\\dashv N_{\\dag}$ agree with those of the original ordinary rigidification--coherent-nerve adjunction.",
+      "declarations": [
+        "DaggerModels.OrdinaryRigidification.DaggerRigidification.daggerRigidification",
+        "DaggerModels.OrdinaryRigidification.DaggerRigidification.daggerRigidification_forget",
+        "DaggerModels.OrdinaryRigidification.DaggerAdjunction.daggerRigidificationCoherentNerveAdjunction",
+        "DaggerModels.OrdinaryRigidification.DaggerAdjunction.adjunction_unit",
+        "DaggerModels.OrdinaryRigidification.DaggerAdjunction.adjunction_counit"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/DaggerRigidification.lean",
+          "lines": [
+            117,
+            128
+          ],
+          "sha256": "a371675c2ab4e77989ac5c8924ce6861c472fc646625d039796e899082bc9a38"
+        },
+        {
+          "path": "lean/DaggerModels/DaggerAdjunction.lean",
+          "lines": [
+            76,
+            89,
+            96
+          ],
+          "sha256": "d32ddef44bda448cbe9485f896bca91fc15c11eca4ea655491d5aab1a5e6dee8"
+        }
+      ],
+      "provenance_tex": "The dagger lift retains the full ordinary enriched mapping data. The adjunction alone does not assert a Quillen equivalence.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "2.19",
+      "anchor": "result-2-19",
+      "title_tex": "The Kan dagger core and the unitary core of a Kan object",
+      "kind": "theorem",
+      "statement_tex": "Let $X$ be a dagger simplicial set in universe $u$.\nIf the underlying simplicial set of $X$ admits inner-horn fillers, then the underlying simplicial set of its original dagger core is a Kan complex, and its ordinary core $X^{\\simeq}$ is the greatest Kan subcomplex of $X$.\nIf, in addition, the underlying simplicial set of $X$ is itself a Kan complex, there is an isomorphism\n\\begin{align}\n  \\calU(X)&\\cong V_{\\mathrm{can}}(X).\n\\end{align}\nHere $\\calU(X)$ is the unitary core of Part~I, and $V_{\\mathrm{can}}(X)$ abbreviates Lean's \\nolinkurl{canonicalVertexFunctor.obj X}.",
+      "declarations": [
+        "DaggerOriginalDaggerCoreKan.daggerCoreCandidate_kan",
+        "DaggerOriginalDaggerCoreKan.daggerCore_isGreatestKanSubcomplex",
+        "DaggerNativeOriginalKanUnitaryCanonicalIso.unitaryCanonicalIso"
+      ],
+      "sources": [
+        {
+          "path": "lean/OriginalDaggerCoreKan.lean",
+          "lines": [
+            24,
+            32
+          ],
+          "sha256": "b05a4601e5910f358b066f53f47f67e83e4c73981588c5fb7522130e80b84b35"
+        },
+        {
+          "path": "lean/NativeOriginalKanUnitaryCanonicalIso.lean",
+          "lines": [
+            37
+          ],
+          "sha256": "66d2025ddbee4d7cdda53147cbb7424f351fcb2479616043e51d31c6ae24c4e0"
+        }
+      ],
+      "provenance_tex": "The core construction and Kan property are established for the specified inner-horn hypothesis; the unitary-core isomorphism requires the additional Kan hypothesis.",
+      "tex_file": "dagger-results.tex"
+    },
+    {
+      "id": "3.1",
+      "anchor": "result-3-1",
+      "title_tex": "Small object argument for finitely presentable domains",
+      "kind": "theorem",
+      "statement_tex": "Let $C$ have object universe $u$ and Hom universe $v$.\nSuppose that $C$ is locally small relative to an auxiliary universe $w$ and has the required small colimits of that size.\nLet $I$ be a small family of morphisms whose domains are finitely presentable relative to $w$.\nThen $I$ satisfies the small object argument relative to $w$.\nIn particular, no separate cardinal condition on individual generators is needed: the relative-cell colimit condition is verified at $\\aleph_0$.",
+      "declarations": [
+        "DaggerModels.SmallObjectFiniteDomains.hasSmallObjectArgument"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/SmallObjectFiniteDomains.lean",
+          "lines": [
+            56
+          ],
+          "sha256": "e9bc4249e63715062d3df5e8c3d4b4d0f2a2daf11466f5346395949b1c107700"
+        }
+      ],
+      "provenance_tex": "A general bridge proved in this formalization and applied to Mathlib's small object argument. The three universes and the smallness, colimit, and finite-presentability hypotheses remain explicit.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.2",
+      "anchor": "result-3-2",
+      "title_tex": "Boundary-cell presentations and lifting for simplicial sets",
+      "kind": "theorem",
+      "statement_tex": "In any universe $u$, every monomorphism $i:X\\to Y$ of ordinary simplicial sets admits a countable relative boundary-cell presentation that retains the original $X$, $Y$, and $i$.\nLet $I$ be Mathlib's actual family of boundary inclusions in all degrees.\nThen\n\\begin{align}\nI\\text{-}\\cell\n  &= \\operatorname{Mono}(\\sSet), \\\\\nI^{\\square} &= \\operatorname{Mono}(\\sSet)^{\\square}\n  \\subseteq \\operatorname{KanFib}(\\sSet).\n\\end{align}\nThe final inclusion applies to maps with arbitrary source and target.\nThese conclusions alone do not identify boundary right lifting with weak homotopy equivalence or with trivial fibrations.",
+      "declarations": [
+        "DaggerModels.SSetBoundaryCells.exists_relativeCellComplex",
+        "DaggerModels.SSetBoundaryCells.boundaryCells_eq_monomorphisms",
+        "DaggerModels.SSetBoundaryCells.I_rlp_eq_monomorphisms_rlp",
+        "DaggerModels.SSetBoundaryFibration.boundary_rlp_le_fibrations"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/SSetBoundaryCells.lean",
+          "lines": [
+            28,
+            44,
+            55
+          ],
+          "sha256": "59fccf25a29389e2a99787781493bf564ed1d007a0e3c06b744e230f9524abe9"
+        },
+        {
+          "path": "lean/DaggerModels/SSetBoundaryFibration.lean",
+          "lines": [
+            159
+          ],
+          "sha256": "ddca5302ae140c3164e80da260a14ca032c7b6f202676953084bf6347367e9c2"
+        }
+      ],
+      "provenance_tex": "A boundary-cell construction and its lifting consequences proved here for ordinary simplicial sets, using Mathlib's boundary inclusions and Kan-fibration predicate.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.3",
+      "anchor": "result-3-3",
+      "title_tex": "Promotion of a local-presentability rank",
+      "kind": "proposition",
+      "statement_tex": "Let $C$ have object universe $w$ and Hom universe $v$, and suppose that $C$ has pullbacks.\nFor regular cardinals $\\kappa_0,\\kappa$ in universe $u$ with $\\kappa_0\\leq\\kappa$,\n\\begin{align}\nC\\text{ is }\\kappa_0\\text{-locally presentable}\n  \\quad\\Longrightarrow\\quad\nC\\text{ is }\\kappa\\text{-locally presentable}.\n\\end{align}",
+      "declarations": [
+        "DaggerLocallyPresentableRankPromotion.locallyPresentable_of_le"
+      ],
+      "sources": [
+        {
+          "path": "lean/LocallyPresentableRankPromotion.lean",
+          "lines": [
+            9
+          ],
+          "sha256": "1b46306755072c6603b8006a73373cca529d5cd204ea5f1d72877fb7c72f4927"
+        }
+      ],
+      "provenance_tex": "A general proposition proved here using Mathlib's strong-generator criterion. Pullbacks and the regularity of both cardinals are retained as hypotheses.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.4",
+      "anchor": "result-3-4",
+      "title_tex": "Detection of weak equivalences by a localization",
+      "kind": "theorem",
+      "statement_tex": "Let $C$ be a model category in which every object is cofibrant, and let $L:C\\to H$ be a localization of $C$ at its weak equivalences.\nFor every morphism $f$,\n\\begin{align}\nf\\text{ is a weak equivalence}\n  \\quad\\Longleftrightarrow\\quad\nL(f)\\text{ is an isomorphism in }H.\n\\end{align}\nThe object and Hom universes of $C$ and $H$ may be chosen independently.",
+      "declarations": [
+        "DaggerNativeAllCofibrantLocalizationSaturation.weakEquivalence_iff_localization_isIso"
+      ],
+      "sources": [
+        {
+          "path": "lean/NativeAllCofibrantLocalizationSaturation.lean",
+          "lines": [
+            32
+          ],
+          "sha256": "c9d85192d1f5361f4fd7599200419827b2f61c34f879297f7153f2c628f6868d"
+        }
+      ],
+      "provenance_tex": "A general detection theorem proved here. It assumes an existing model structure and localization; it does not construct a Bousfield localization.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.5",
+      "anchor": "result-3-5",
+      "title_tex": "Local finite presentability of simplicial and bisimplicial sets",
+      "kind": "proposition",
+      "statement_tex": "For every value universe $u$, the categories of ordinary simplicial sets and bisimplicial sets are both locally finitely presentable relative to $u$:\n\\begin{align}\n\\sSet\\text{ and }\\operatorname{BiSSet}_u\n  \\quad\\text{are locally finitely presentable}.\n\\end{align}",
+      "declarations": [
+        "DaggerNativeSSetLocallyPresentable.locallyFinitelyPresentable",
+        "DaggerNativeBisimplicialLocallyPresentable.locallyFinitelyPresentable"
+      ],
+      "sources": [
+        {
+          "path": "lean/NativeSSetLocallyPresentable.lean",
+          "lines": [
+            17
+          ],
+          "sha256": "e85eb9165021631d49ce018fd7aa235d11519e20e41c96e95c85036ce6d5c55b"
+        },
+        {
+          "path": "lean/NativeBisimplicialLocallyPresentable.lean",
+          "lines": [
+            14
+          ],
+          "sha256": "208092dc7fb5cbc0f80b00156ea38130576764d44022336b0d703da163dcfd88"
+        }
+      ],
+      "provenance_tex": "Concrete applications in this formalization of Mathlib's results on presheaf categories and strong generators. They supply ambient-category hypotheses for the small object and Smith constructions.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.6",
+      "anchor": "result-3-6",
+      "title_tex": "Functorial factorizations for the specified generators",
+      "kind": "theorem",
+      "statement_tex": "In the category $\\sCat^{\\dag}$ with common universe $u$, let $I_{\\dag}$ be the original union of boundary generators and the object generator.\nEvery morphism factors functorially with left leg in ${}^{\\square}((I_{\\dag})^{\\square})$ and right leg in $(I_{\\dag})^{\\square}$.\nMoreover, fix an object type $O$ in universe $u$.\nFor each of the original generating families $I_O$ and $J_O$ in $\\sCat^{\\dag}_O$, every morphism $f$ has functorial factorizations\n\\begin{align}\nf &= r_I(f)\\circ\\ell_I(f),\n  &\\ell_I(f)&\\in{}^{\\square}(I_O^{\\square}),\n  &r_I(f)&\\in I_O^{\\square}, \\\\\nf &= r_J(f)\\circ\\ell_J(f),\n  &\\ell_J(f)&\\in{}^{\\square}(J_O^{\\square}),\n  &r_J(f)&\\in J_O^{\\square}.\n\\end{align}",
+      "declarations": [
+        "DaggerModels.DaggerSmallObject.generators_hasFunctorialFactorization",
+        "DaggerFixedCategorySmallObject.I_hasFunctorialFactorization",
+        "DaggerFixedCategorySmallObject.J_hasFunctorialFactorization"
+      ],
+      "sources": [
+        {
+          "path": "lean/DaggerModels/DaggerSmallObject.lean",
+          "lines": [
+            51
+          ],
+          "sha256": "047b455cf6d9937b0ff0f8563de77c8dbde4f42b5a04deb26fac6eccd153be15"
+        },
+        {
+          "path": "lean/FixedCategorySmallObject.lean",
+          "lines": [
+            31,
+            35
+          ],
+          "sha256": "46bdd2255aa8b4be183c85cd3b84df583c4861ece95f0519dae2921f654c0bc9"
+        }
+      ],
+      "provenance_tex": "Concrete applications of the general small object argument after finite presentability is proved for the relevant domains. These factorizations alone do not identify a weak-equivalence class or establish a model structure.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.7",
+      "anchor": "result-3-7",
+      "title_tex": "A model structure on fixed-object strict dagger groupoids",
+      "kind": "theorem",
+      "statement_tex": "Fix a type $O$ in universe $u$.\nLet $\\sGpd^{\\dag}_O$ be the full subcategory of $\\sCat^{\\dag}_O$ spanned by the objects satisfying the original degreewise invertibility condition; its morphisms are dagger-preserving functors whose object map is the identity on $O$.\nThis category has a model structure.\nFor a morphism $F:C\\to D$, weak equivalences and fibrations are detected on every Hom map $F_{x,y}$, for $x,y\\in O$:\n\\begin{align}\nF\\in W\n  &\\Longleftrightarrow\n    \\forall x,y\\in O,\\;F_{x,y}\\in W_{\\sSet}, \\\\\nF\\in\\Fib\n  &\\Longleftrightarrow\n    \\forall x,y\\in O,\\;F_{x,y}\\in\\Fib_{\\sSet}.\n\\end{align}\nCofibrations are the left lifting class of the specified trivial fibrations in this category.",
+      "declarations": [
+        "DaggerOriginalFixedObjectStrictDaggerModel.strictDaggerModel",
+        "DaggerOriginalFixedObjectStrictDaggerModel.model_weakEquivalence_iff",
+        "DaggerOriginalFixedObjectStrictDaggerModel.model_fibration_iff"
+      ],
+      "sources": [
+        {
+          "path": "lean/OriginalFixedObjectStrictDaggerModel.lean",
+          "lines": [
+            20,
+            24,
+            30,
+            35
+          ],
+          "sha256": "8ac497b0c0a20d59db4bd4cdc85107677fcdde002a6b438e767e9d996d97f52d"
+        },
+        {
+          "path": "lean/OriginalFixedObjectDaggerCategories.lean",
+          "lines": [
+            87,
+            91
+          ],
+          "sha256": "f1ff3d41eef7cf7b255800054e877d38ae8099b40ed34434b76abb4797aae185"
+        }
+      ],
+      "provenance_tex": "A concrete model structure established here after the required factorizations are proved. The fixed-object category retains the original dagger enrichment and strictness. This theorem does not establish the simplicial model axioms or all of Theorem C.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.8",
+      "anchor": "result-3-8",
+      "title_tex": "Generation of normal monomorphisms by boundaries in all degrees",
+      "kind": "theorem",
+      "statement_tex": "For anti-involutive simplicial sets, let $I_{\\mathrm{nor}}$ be the family obtained by applying the original Part I free functor $F_{\\AInv}$ to boundary inclusions in every degree.\nThe original class of normal monomorphisms is exactly the closure of $I_{\\mathrm{nor}}$ under coproducts, pushouts, transfinite compositions, and retracts.\nIndeed, every normal monomorphism admits a countable relative-cell presentation:\n\\begin{align}\n\\operatorname{NormalMono}\n  = I_{\\mathrm{nor}}\\text{-}\\cof.\n\\end{align}",
+      "declarations": [
+        "DaggerModels.OriginalAntiInvolutiveNormalGeneratorRecognition.normalMonos_eq_normalGeneratorSaturation",
+        "DaggerModels.OriginalAntiInvolutiveNormalGeneratorRecognition.normalMono_mem_transfinite_pushouts"
+      ],
+      "sources": [
+        {
+          "path": "lean/OriginalAntiInvolutiveNormalGeneratorRecognition.lean",
+          "lines": [
+            164,
+            127
+          ],
+          "sha256": "8920fc5a8982f6619d42e94d1130b10fb36bd87901c9b944af23d44e94416c8d"
+        }
+      ],
+      "provenance_tex": "A concrete generation theorem proved here with the original normality predicate and free boundary maps in all degrees, rather than a positive-degree substitute.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.9",
+      "anchor": "result-3-9",
+      "title_tex": "Construction of the ordinary Joyal model structure",
+      "kind": "theorem",
+      "statement_tex": "For ordinary $\\sSet$, let $W_{\\Joyal}$ be the class of weak categorical equivalences tested by the homotopy categories of internal Homs into every quasi-category $Z$.\nThe specified Smith data satisfy their hypotheses and give a model structure with classes\n\\begin{align}\n\\Cof_{\\Joyal} &= \\operatorname{Mono}(\\sSet), \\\\\nW_{\\Joyal} &= \\{f\\mid \\forall Z\\text{ a quasi-category},\\;\n       \\h(Z^f)\\text{ is an equivalence of categories}\\}, \\\\\n\\Fib_{\\Joyal} &= (\\operatorname{Mono}(\\sSet)\\cap W_{\\Joyal})^{\\square}.\n\\end{align}\nHere $Z^f$ denotes precomposition with $f$ on the internal Hom.\nThe identifications of the generated left and right classes are equalities for these specified Smith data.",
+      "declarations": [
+        "DaggerNativeOriginalJoyalSmithModelData.modelData",
+        "DaggerNativeOriginalJoyalSmithModelData.generated_left_eq",
+        "DaggerNativeOriginalJoyalSmithModelData.generated_right_eq",
+        "DaggerActualDCHRightInducedAndMainTheoremD.ordinaryJoyalModel"
+      ],
+      "sources": [
+        {
+          "path": "lean/NativeOriginalJoyalSmithModelData.lean",
+          "lines": [
+            12,
+            25,
+            29
+          ],
+          "sha256": "6a778d99bf49202bae9e281e5017cc38f6315f1f733dac2464fef7f734bfba88"
+        },
+        {
+          "path": "lean/ActualDCHRightInducedAndMainTheoremD.lean",
+          "lines": [
+            45
+          ],
+          "sha256": "dec3d428835bfb4292581305929d17fe2b874a37b650c41b186ad9c5749e7bae"
+        }
+      ],
+      "provenance_tex": "A concrete Smith application assembled here for ordinary simplicial sets, not a new proof of a general Smith recognition theorem. It supplies the ordinary model used in the next comparison.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "3.10",
+      "anchor": "result-3-10",
+      "title_tex": "The anti-involutive Joyal model and its right-induced classes",
+      "kind": "theorem",
+      "statement_tex": "In the category $\\sSet^{\\AInv}$ of anti-involutive simplicial sets, take cofibrations to be the original normal monomorphisms and weak equivalences to be the inverse image of $W_{\\Joyal}$ under the forgetful functor.\nConcrete Smith data and a second functorial factorization give a model structure $\\sSet^{\\AInv}_{\\DCH}$.\nFor the forgetful functor $U_{\\AInv}:\\sSet^{\\AInv}\\to\\sSet$, its three classes satisfy precisely\n\\begin{align}\n\\Cof_{\\DCH} &= \\operatorname{NormalMono}, \\\\\nf\\in W_{\\DCH}\n  &\\Longleftrightarrow U_{\\AInv}(f)\\in W_{\\Joyal}, \\\\\nf\\in\\Fib_{\\DCH}\n  &\\Longleftrightarrow U_{\\AInv}(f)\\in\\Fib_{\\Joyal}.\n\\end{align}\nThese are the classes of the same concrete model used in Theorem D; its two non-Quillen conclusions are not counted again here.\nNor does this construction assert a general right-induced transfer theorem for arbitrary right adjoints.",
+      "declarations": [
+        "DaggerActualOriginalAntiJoyalSmithModelData.modelData",
+        "DaggerActualDCHRightInducedAndMainTheoremD.model",
+        "DaggerActualDCHRightInducedAndMainTheoremD.cofibration_iff_normal",
+        "DaggerActualDCHRightInducedAndMainTheoremD.weakEquivalence_iff_underlying",
+        "DaggerActualDCHRightInducedAndMainTheoremD.fibration_iff_underlying"
+      ],
+      "sources": [
+        {
+          "path": "lean/ActualOriginalAntiJoyalSmithModelData.lean",
+          "lines": [
+            20
+          ],
+          "sha256": "d8acb58c1fbd3575f4dc1fc016fc0e336b84d7cb95246b075aefc11869df5558"
+        },
+        {
+          "path": "lean/ActualDCHRightInducedAndMainTheoremD.lean",
+          "lines": [
+            15,
+            22,
+            56,
+            64
+          ],
+          "sha256": "dec3d428835bfb4292581305929d17fe2b874a37b650c41b186ad9c5749e7bae"
+        }
+      ],
+      "provenance_tex": "A concrete Smith application in the anti-involutive category and an identification of right-induced weak equivalences and fibrations relative to the constructed ordinary Joyal model. This is the existence component of the model used in Theorem D.",
+      "tex_file": "model-results.tex"
+    },
+    {
+      "id": "4.1",
+      "anchor": "result-4-1",
+      "title_tex": "A Kan--Quillen self-equivalence from $Q_{\\mathrm{rc}}$",
+      "kind": "theorem",
+      "statement_tex": "In every universe $u$, the left Kan extension\n$\\operatorname{Real}_{Q_{\\mathrm{rc}}}:\\sSet\\to\\sSet$ of the original\nright-cone cosimplicial object $Q_{\\mathrm{rc}}$ and its right adjoint\n$\\operatorname{Sing}_{Q_{\\mathrm{rc}}}$ form a Quillen equivalence for the\nordinary Kan model structure.\nIn particular, for every Kan complex $X$, the counit\n$\\operatorname{Real}_{Q_{\\mathrm{rc}}}\\operatorname{Sing}_{Q_{\\mathrm{rc}}}X\\to X$\nis a weak equivalence.\nThis is not the adjunction between topological realization and the ordinary\nsingular complex of a topological space.",
+      "declarations": [
+        "DaggerActualQQuillenEquivalence.isQuillenEquivalence",
+        "DaggerActualQKanCounitWeakEquivalence.counit_weakEquivalence"
+      ],
+      "sources": [
+        {
+          "path": "lean/ActualQQuillenEquivalence.lean",
+          "lines": [
+            17
+          ],
+          "sha256": "bc296d2ad579857186d816677bcc8568f0229eda761c18395676a9dfddc00301"
+        },
+        {
+          "path": "lean/ActualQKanCounitWeakEquivalence.lean",
+          "lines": [
+            24
+          ],
+          "sha256": "2ce7db50b437cce6af945d21dd188b966946e95958af8b2ca8428e10198e17df"
+        }
+      ],
+      "provenance_tex": "The construction and comparison for the original right-cone object $Q_{\\mathrm{rc}}$ are proved in this formalization, using the existing Kan model structure and Mathlib's Quillen-equivalence criterion. This is an ordinary simplicial-set result, distinct from the dagger rigidification result in Theorem B.",
+      "tex_file": "simplicial-results.tex"
+    },
+    {
+      "id": "4.2",
+      "anchor": "result-4-2",
+      "title_tex": "The projective model structure on simplicial $C_2$-actions",
+      "kind": "theorem",
+      "statement_tex": "In every universe $u$, the category\n$\\Fun(BC_2,\\sSet)_{\\proj}$ of simplicial $C_2$-actions admits a projective\nmodel structure.\nIf $U$ is the forgetful functor and $f$ is an equivariant map, then\n\\begin{align}\n f\\text{ is a weak equivalence}&\\iff U(f)\\text{ is a Kan weak equivalence},\\\\\n f\\text{ is a fibration}&\\iff U(f)\\text{ is a Kan fibration}.\n\\end{align}\nIts cofibrations form the left lifting class generated by the free simplicial\nboundary inclusions.\nThe assertion concerns this $C_2$-action category; it does not claim the same\nconstruction unconditionally for every group.",
+      "declarations": [
+        "DaggerOriginalSimplicialActionModelCategory.modelStructure",
+        "DaggerOriginalSimplicialActionModelCategory.weakEquivalence_iff_underlying",
+        "DaggerOriginalSimplicialActionModelCategory.fibration_iff_underlying"
+      ],
+      "sources": [
+        {
+          "path": "lean/OriginalSimplicialActionModelCategory.lean",
+          "lines": [
+            126,
+            58,
+            131
+          ],
+          "sha256": "0e211cc0604973d98b1cbf40fe3d4595a928534d1b2d3fe138d49b2f42e0214c"
+        }
+      ],
+      "provenance_tex": "The free-boundary and free-horn generators, finite-source smallness, and closure of weak equivalences are verified for this action category. The construction uses Mathlib, the ported TopPackage machinery, and the ordinary Kan model structure; it does not present that general machinery as a new theorem.",
+      "tex_file": "simplicial-results.tex"
+    },
+    {
+      "id": "4.3",
+      "anchor": "result-4-3",
+      "title_tex": "The Borel model structure on topological $C_2$-actions",
+      "kind": "theorem",
+      "statement_tex": "In every universe $u$, the category of $C_2$-actions in\n$\\mathrm{TopCat}$ admits a Borel model structure.\nAn equivariant map is a weak equivalence, respectively a fibration, exactly\nwhen its underlying map has that property in the existing\n$\\mathrm{TopCat}$ model structure.\nThe cofibrations coincide with the original Borel left lifting class.\nThe result uses that particular topological model structure and makes no claim\nabout a different category of topological spaces.",
+      "declarations": [
+        "DaggerOriginalBorelModelCategory.modelStructure",
+        "DaggerOriginalBorelModelCategory.weakEquivalence_iff_underlying",
+        "DaggerOriginalBorelModelCategory.fibration_iff_underlying",
+        "DaggerOriginalBorelModelCategory.cofibration_iff_original"
+      ],
+      "sources": [
+        {
+          "path": "lean/OriginalBorelModelCategory.lean",
+          "lines": [
+            73,
+            79,
+            85,
+            91
+          ],
+          "sha256": "1a248fb067d497ba46a87560c74822f8895a4a3e50cca1149ded92c675469bc4"
+        }
+      ],
+      "provenance_tex": "This is a concrete model construction for the action category, using free realized boundaries and horns and finite free realization sources. The underlying topological q-model and package machinery are reused from pinned TopCatModelCategory sources; their upstream proofs are not claimed as new independent proofs here.",
+      "tex_file": "simplicial-results.tex"
+    },
+    {
+      "id": "4.4",
+      "anchor": "result-4-4",
+      "title_tex": "Cofibrancy of $E_{\\bullet}C_2$ and contractibility of $EC_2$",
+      "kind": "theorem",
+      "statement_tex": "In every universe $u$, the $C_2$-action on the simplicial set\n$E_{\\bullet}C_2$ is cofibrant in the projective model structure above.\nIts topological realization $EC_2:=|E_{\\bullet}C_2|$ is contractible as an\n\\emph{underlying} topological space.\nThus the two conclusions are $\\operatorname{IsCofibrant}(E_{\\bullet}C_2)$ and\n$\\operatorname{ContractibleSpace}(EC_2)$.\nThe first follows from an equivariant relative cell complex built from free\nboundary cells; the second follows by realizing an explicit contraction.\nThe latter does not assert equivariant contractibility or contractibility of\nfixed-point spaces.",
+      "declarations": [
+        "DaggerOriginalEC2SimplicialProjectiveCofibrancy.originalSimplicialEC2_isCofibrant",
+        "DaggerOriginalEC2RealizationContractibility.realizedContractibleSpace",
+        "DaggerOriginalEC2EquivariantRelativeCellComplex.equivariantRelativeCellComplex"
+      ],
+      "sources": [
+        {
+          "path": "lean/OriginalEC2SimplicialProjectiveCofibrancy.lean",
+          "lines": [
+            60
+          ],
+          "sha256": "330f5ffd0009f4afde6a8b738be7a46a0eca41f287f810459cb75d2313820a68"
+        },
+        {
+          "path": "lean/OriginalEC2RealizationContractibility.lean",
+          "lines": [
+            58
+          ],
+          "sha256": "3b26966e360dd45c75c98e84208ba1a541dc3706ccfb4be8e798ff770afd4f40"
+        },
+        {
+          "path": "lean/OriginalEC2EquivariantRelativeCellComplex.lean",
+          "lines": [
+            84
+          ],
+          "sha256": "77e0bacfec8766bc76e441a711ee2ad6ec3a36c5f96e2c7bc3e19dcb59549394"
+        }
+      ],
+      "provenance_tex": "The action, skeletal pushouts, equivariant relative cell complex, and simplicial contraction are constructed for the original $E_{\\bullet}C_2$. General cell-complex and topological-realization APIs are reused from Mathlib and TopCat.",
+      "tex_file": "simplicial-results.tex"
+    },
+    {
+      "id": "4.5",
+      "anchor": "result-4-5",
+      "title_tex": "Kan fibers of prefix mapping spaces",
+      "kind": "proposition",
+      "statement_tex": "Let $X\\in\\sSet$ be a quasi-category in any universe $u$.\nFor every $k\\geq0$, every $k$-simplex $\\sigma$ of $X$, and every vertex $b$,\nthe fiber $\\operatorname{prefixMapping}(X,\\sigma,b)$ of the original coslice\nprojection over $b$ is a Kan complex.\nThe case $k=0$ includes the Kan property of the ordinary left mapping space.\nThe stated result retains the quasi-category hypothesis on $X$.",
+      "declarations": [
+        "DaggerActualQuasicategoryMappingFibres.prefixMapping_kan",
+        "DaggerActualQuasicategoryMappingFibres.leftMapping_kan"
+      ],
+      "sources": [
+        {
+          "path": "lean/ActualQuasicategoryMappingFibres.lean",
+          "lines": [
+            32,
+            37
+          ],
+          "sha256": "088a54a02cf54596baab0c37bc56f47675d0432e40185d33f5d98cd0ae8927c4"
+        }
+      ],
+      "provenance_tex": "The proof uses lifting for the original coslice projection and the Kan criterion for its fibers. The statement covers every prefix simplex and terminal vertex, rather than an individual simplicial face calculation.",
+      "tex_file": "simplicial-results.tex"
+    },
+    {
+      "id": "4.6",
+      "anchor": "result-4-6",
+      "title_tex": "Weak-equivalence invariance of right mapping spaces",
+      "kind": "theorem",
+      "statement_tex": "Let $X,Y$ be quasi-categories in any universe $u$, let $f:X\\to Y$ be a\ncategorical weak equivalence, and let $a,b\\in X_0$.\nThe induced map of the original right-cone mapping spaces\n\\begin{align}\n \\Map^{R}_{X}(a,b)\n  &\\to \\Map^{R}_{Y}(f(a),f(b))\n\\end{align}\nis a weak equivalence of ordinary simplicial sets.\nNo monomorphism or Kan-fibration assumption is imposed on $f$.",
+      "declarations": [
+        "DaggerActualRightMappingWeakInvariance.map_weak_of_categorical_weak"
+      ],
+      "sources": [
+        {
+          "path": "lean/ActualRightMappingWeakInvariance.lean",
+          "lines": [
+            36
+          ],
+          "sha256": "78bacc25bed98b324f9ad52f7dacc782383dd60b71945e1015c03a951837a304"
+        }
+      ],
+      "provenance_tex": "The proof uses the original right-cone mapping spaces, a span for categorical weak equivalences, and lifting. It is distinct from the unitary-core criterion in the dagger Theorem C.",
+      "tex_file": "simplicial-results.tex"
+    },
+    {
+      "id": "4.7",
+      "anchor": "result-4-7",
+      "title_tex": "Right-cone mapping spaces and $Q_{\\mathrm{rc}}$-singular enriched Homs",
+      "kind": "theorem",
+      "statement_tex": "Let $D\\in\\sCat$ be an ordinary simplicial category in any universe $u$,\nand let $v,w$ be vertices of its coherent nerve.\nWrite $\\bar v,\\bar w$ for their corresponding objects of $D$.\nThere is an isomorphism of simplicial sets\n\\begin{align}\n \\operatorname{rightConeSimplices}_{D}(v,w)\n  &\\cong \\operatorname{Sing}_{Q_{\\mathrm{rc}}}(D(\\bar v,\\bar w)).\n\\end{align}\nThe comparison is bijective in every simplicial degree and respects the\nsimplicial operators.\nNo additional naturality statement in $D,v,w$ is asserted here.",
+      "declarations": [
+        "DaggerActualRightConeSingularComparisonIso.comparisonIso",
+        "DaggerActualRightConeSingularComparisonIso.comparison_app_bijective"
+      ],
+      "sources": [
+        {
+          "path": "lean/ActualRightConeSingularComparisonIso.lean",
+          "lines": [
+            43,
+            17
+          ],
+          "sha256": "108437002334c585a9c41040e65f2bcf6904d6d0ad3698185b39bc7750c15f72"
+        }
+      ],
+      "provenance_tex": "The isomorphism compares the original cone evaluation with the original $Q_{\\mathrm{rc}}$-singular construction. It concerns mapping objects and is separate from the ordinary rigidification--coherent-nerve adjunction itself.",
+      "tex_file": "simplicial-results.tex"
+    }
+  ],
+  "reused_foundations": {
+    "declarations": [
+      "SSet.modelCategoryQuillen.weakEquivalence_iff_of_fibration",
+      "SSet.modelCategoryQuillen.rlp_I_eq_trivialFibrations",
+      "SSet.modelCategoryQuillen.inst"
+    ],
+    "sources": [
+      "lean/TopCatModelCategory/SSet/KeyLemma.lean",
+      "lean/TopCatModelCategory/ModelCategorySSet.lean"
+    ],
+    "provenance": "Pinned TopCatModelCategory compatibility port; reused upstream proofs."
+  }
+}
