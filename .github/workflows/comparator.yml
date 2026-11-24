@@ -36,7 +36,7 @@ jobs:
       - name: Check out pinned build inputs and negative-control source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          repository: Yonoha/dagger-models-lean
+          repository: Yonoha/dagger-models-lean-part-i
           ref: dce8401a23588ba65b8aa4ca41de26cb0203d444
           path: reference
           persist-credentials: false

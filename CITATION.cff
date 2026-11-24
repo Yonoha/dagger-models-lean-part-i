@@ -7,8 +7,8 @@ authors:
     given-names: Keima
 version: 0.2.0-rc1
 date-released: 2026-10-19
-url: "https://github.com/Yonoha/dagger-models-lean/releases/tag/v0.2.0-rc1"
-repository-code: "https://github.com/Yonoha/dagger-models-lean"
+url: "https://github.com/Yonoha/dagger-models-lean-part-i/releases/tag/v0.2.0-rc1"
+repository-code: "https://github.com/Yonoha/dagger-models-lean-part-i"
 # Covers original companion code and documentation, not a grant for third-party copies.
 license: Apache-2.0
 abstract: >-
