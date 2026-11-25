@@ -22,6 +22,7 @@ import tempfile
 import time
 from urllib.request import Request, urlopen
 
+from a_source_ci import CURRENT_BCD_ARCHIVE_SHA256, HISTORICAL_BCD_ARCHIVE_SHA256
 from verify_debian_image import BUILD, IMAGE, extract_checked
 from source_layout import library_source_root
 
@@ -33,7 +34,6 @@ EXPORTER_COMMIT = "bd93e5ed12fbeea19f39ec3ead659c293b2b8a95"
 GUEST_KERNEL = "linux-image-7.2.6+deb13-amd64=7.2.6-1~bpo13+1"
 GUEST_LINUX_BASE = "linux-base=4.17~bpo13+1"
 CURRENT_GRAPH_SHA = "0a3af50bbf1dbb6ae6ddd5b679cb6d0120306c3f3d34777bc358cfd84859943f"
-OLD_ASSET_SHA = "21111525e8bc72f2c40051f5ce13788beb94ca39c1e4e9daca739d8540f576b3"
 CURRENT_AUDIT_SHA = "c513a930965ed19cc6d757276b6d83675eb44992bc87c1bcaefcd8ae3365db03"
 CURRENT_INVENTORY_SHA = {
     "owners": "149da9a29e3cd8535e14acdb9e0c487c7692d4191fd5e9db97c03e1bee273aa2",
@@ -445,7 +445,7 @@ def validate_guest_result(result: dict, *, source_revision: str, lock: dict,
             result.get("A_Comparator_extension_required") is not False or
             result.get("current_source_BCD_checks") is not True or
             result.get("candidate_source_revision") != source_revision or
-            result.get("trusted_asset_sha256") != OLD_ASSET_SHA or
+            result.get("trusted_asset_sha256") != CURRENT_BCD_ARCHIVE_SHA256 or
             result.get("graph_sha256") != CURRENT_GRAPH_SHA or
             result.get("auditor_source_sha256") != CURRENT_AUDIT_SHA or
             result.get("audit_inventory_sha256") != CURRENT_INVENTORY_SHA or
@@ -514,10 +514,10 @@ def main() -> None:
     lock = json.loads(lock_path.read_text())
     a_lock_path = control / ".ci/a/asset-lock.json"
     a_lock = json.loads(a_lock_path.read_text())
-    if (lock.get("published_archive_sha256") != OLD_ASSET_SHA or
-            a_lock.get("old_BCD_asset_dependency_sha256") != OLD_ASSET_SHA or
+    if (lock.get("published_archive_sha256") != CURRENT_BCD_ARCHIVE_SHA256 or
+            a_lock.get("old_BCD_asset_dependency_sha256") != HISTORICAL_BCD_ARCHIVE_SHA256 or
             a_lock.get("expected_source_graph_sha256") != CURRENT_GRAPH_SHA):
-        raise ValueError("old BCD/A independent trusted lock dependency differs")
+        raise ValueError("current B/C/D runtime or historical A evidence lock differs")
     asset = runner_temp / "bcd-trusted"
     a_asset = runner_temp / "a-trusted"
     # Both public URLs/hashes must be pinned before any large tool/image work.
@@ -550,7 +550,7 @@ def main() -> None:
             receipt.get("archive_sha256") != a_lock["published_archive_sha256"] or
             receipt.get("manifest_sha256") != a_lock["manifest_sha256"] or
             receipt.get("source_graph_sha256") != CURRENT_GRAPH_SHA or
-            receipt.get("old_BCD_asset_dependency_sha256") != OLD_ASSET_SHA or
+            receipt.get("old_BCD_asset_dependency_sha256") != HISTORICAL_BCD_ARCHIVE_SHA256 or
             receipt.get("Linux_CI_passed") is not False or
             receipt.get("publication_performed") is not False):
         raise ValueError("A fetch receipt differs")

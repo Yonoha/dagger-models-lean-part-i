@@ -29,3 +29,9 @@ The original companion code and documentation use Apache-2.0. Reused Mathlib and
 Use the release tag `v0.2.0-rc1` or an exact source commit for a fixed paper reference. Do not substitute the historical v0.1.0 milestone for this snapshot. The release records the source archive SHA-256, catalogue PDF SHA-256, and the trusted-input hashes and public URLs. Frozen verification inputs live in a separate `verification-inputs-20261019` release so their URLs do not depend on the final source commit.
 
 `PUBLISHING.md` preserves the earlier preparation checklist; it is not a completed hosted-verification certificate. `A_VERIFICATION.md` and `LINUX_VERIFICATION.md` state the precise accepted local scope.
+
+The B/C/D archive in the
+[verification-input release](https://github.com/Yonoha/dagger-models-lean-part-i/releases/tag/verification-inputs-20261019)
+was replaced on November 25, 2026. Use the current asset lock and scripts for
+Comparator replay. The historical release and its receipts still identify the
+original archive by digest. Its former download link has been retired.

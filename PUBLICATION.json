@@ -20,8 +20,8 @@
   },
   "standalone_builder_sha256": "4c2fef0248fe4efc7ed9140ab1a68085eb564acd6a8f18da330fd718c52ab86a",
   "trusted_inputs": {
-    "a": "https://github.com/Yonoha/dagger-models-lean/releases/download/verification-inputs-20261019/trusted-inputs-A-additive.tar.gz",
-    "bcd": "https://github.com/Yonoha/dagger-models-lean/releases/download/verification-inputs-20261019/trusted-inputs.tar.gz"
+    "a": "https://github.com/Yonoha/dagger-models-lean-part-i/releases/download/verification-inputs-20261019/trusted-inputs-A-additive.tar.gz",
+    "bcd": "https://github.com/Yonoha/dagger-models-lean-part-i/releases/download/verification-inputs-20261019/trusted-inputs-sanitized-20261125.tar.gz"
   },
   "version": "0.2.0-rc1"
 }

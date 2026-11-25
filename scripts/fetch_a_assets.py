@@ -26,6 +26,7 @@ ROOT = "dagger-A-additive-trusted-inputs"
 SCHEMA = "dagger-A-additive-trusted-inputs/v1"
 LOCK_SCHEMA = "dagger-A-additive-trusted-inputs-lock/v1"
 GRAPH_SHA = "0a3af50bbf1dbb6ae6ddd5b679cb6d0120306c3f3d34777bc358cfd84859943f"
+# Historical provenance in the immutable additive A payload.
 BCD_SHA = "21111525e8bc72f2c40051f5ce13788beb94ca39c1e4e9daca739d8540f576b3"
 PINNED = {
     "current-audit/TrustedABCDAudit.lean": "c513a930965ed19cc6d757276b6d83675eb44992bc87c1bcaefcd8ae3365db03",

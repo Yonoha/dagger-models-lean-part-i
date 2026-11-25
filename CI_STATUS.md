@@ -4,6 +4,13 @@ Observed on November 25, 2026. The retained local validation record is in
 [LINUX_VERIFICATION.md](LINUX_VERIFICATION.md). This page explains hosted runs;
 it is not a new verification certificate.
 
+The B/C/D verification archive was republished on November 25, 2026 after
+removing local paths, work notes and scratch evidence. See
+[the verification-input release](https://github.com/Yonoha/dagger-models-lean-part-i/releases/tag/verification-inputs-20261019)
+and [the active asset lock](.ci/bcd/asset-lock.json).
+The historical runs below used the original archive. The archive change was
+checked locally without a new hosted run.
+
 | Workflow | Latest observed result | Relevant completed evidence |
 | --- | --- | --- |
 | `lean.yml` — retained foundation build/audit | Success | [Run 39477694292](https://github.com/Yonoha/dagger-models-lean-part-i/actions/runs/39477694292) |

@@ -12,7 +12,9 @@ import shutil
 
 
 GRAPH_SHA = "0a3af50bbf1dbb6ae6ddd5b679cb6d0120306c3f3d34777bc358cfd84859943f"
-OLD_ASSET_SHA = "21111525e8bc72f2c40051f5ce13788beb94ca39c1e4e9daca739d8540f576b3"
+# The A evidence keeps the digest of the archive used in its original run.
+HISTORICAL_BCD_ARCHIVE_SHA256 = "21111525e8bc72f2c40051f5ce13788beb94ca39c1e4e9daca739d8540f576b3"
+CURRENT_BCD_ARCHIVE_SHA256 = "8cc1afea7f5a1ed7e138f0c0346ba0dbaf320ab31894e531438c1e8129a559d5"
 ROOT = "DaggerComparator.mainA"
 POSITIVE = ["Running Lean default kernel on solution.",
             "Lean default kernel accepts the solution",
@@ -95,7 +97,7 @@ def closure_rows(graph: dict) -> list[dict]:
 def validate_summary(summary: dict, manifest: dict, raw_sha: str, raw_bytes: int) -> None:
     if (summary.get("kind") != "PORTABLE_SELECTED_NATIVE_A_EVIDENCE_MACOS_ONLY" or
             summary.get("source_graph_sha256") != GRAPH_SHA or
-            summary.get("old_BCD_asset_dependency_sha256") != OLD_ASSET_SHA or
+            summary.get("old_BCD_asset_dependency_sha256") != HISTORICAL_BCD_ARCHIVE_SHA256 or
             summary.get("A_challenge_raw_export_sha256") != raw_sha or
             summary.get("A_challenge_raw_export_bytes") != raw_bytes or
             summary.get("full_2771_native_build_record_verified") is not True or
@@ -128,8 +130,8 @@ def validate_summary(summary: dict, manifest: dict, raw_sha: str, raw_bytes: int
 
 def validate_extension(args, ci) -> dict:
     extension = args.a_extension
-    if args.asset_sha256 != OLD_ASSET_SHA:
-        raise ValueError("A extension requires the fixed old BCD trusted-base asset SHA")
+    if args.asset_sha256 != CURRENT_BCD_ARCHIVE_SHA256:
+        raise ValueError("A extension requires the pinned current B/C/D runtime archive SHA256")
     if (not extension.is_absolute() or extension.is_symlink() or not extension.is_dir() or
             extension.resolve() != extension or
             any(extension.is_relative_to(p.resolve()) for p in
@@ -139,7 +141,7 @@ def validate_extension(args, ci) -> dict:
                                  args.a_extension_manifest_sha256).read_text())
     files = manifest.get("files")
     if (manifest.get("schema") != "dagger-A-additive-trusted-inputs/v1" or
-            manifest.get("old_BCD_asset_dependency_sha256") != OLD_ASSET_SHA or
+            manifest.get("old_BCD_asset_dependency_sha256") != HISTORICAL_BCD_ARCHIVE_SHA256 or
             manifest.get("source_graph_sha256") != GRAPH_SHA or
             not isinstance(files, dict) or set(files) != set(PINNED) | EXTRA_FILES):
         raise ValueError("A extension manifest schema/file set differs")
